@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadastro de pessoas</title>
+  </head>
+  <body>
+    <header>
+      <h1>Cadastrar pessoa</h1>
+      <a href="index.html">Principal</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="relatorio.html">Relatório</a>
+    </header>
+
+    <main>
+      <h2>Realize um cadastro</h2>
+      <form method="POST" action="validar.html">
+        <div>
+          <div>
+            <!-- for da label é associado ao id -->
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome da pessoa">
+          </div>
+          <div>
+            <label for="usuario">Usuário</label>
+            <input type="text" name="usuario" id="usuario" placeholder="Nickname customizado">
+          </div>
+          <div>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="E-mail">
+          </div>
+        </div>
+
+        <input type="submit" value="Cadastrar">
+        <input type="reset" value="Limpar formulário">
+      </form>
+    </main>
+
+    <footer>
+      <p>Disciplina: Sistemas Web I</p>
+    </footer>
+  </body>
+</html>

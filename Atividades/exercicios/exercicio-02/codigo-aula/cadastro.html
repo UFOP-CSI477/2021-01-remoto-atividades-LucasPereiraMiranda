@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadastro de pessoas</title>
+  </head>
+  <body>
+    <header>
+      <h1>Dados do cadastro da pessoa</h1>
+    </header>
+
+    <form method="POST" action="validar.html">
+      <div>
+        <!-- for da label é associado ao id -->
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Nome da pessoa">
+      </div>
+      <div>
+        <label for="endereco">Endereço:</label>
+        <input type="text" name="endereco" id="endereco" placeholder="Endereço da pessoa">
+      </div>
+      <div>
+        <label for="genero">Gênero:</label>
+        <div>
+          <input type="radio" name="genero" id="feminino" value="F">
+          <label for="feminino">Feminino</label>
+        </div>
+        <div>
+          <input type="radio" name="genero" id="masculino" value="M">
+          <label for="masculino">Masculino</label>
+        </div>
+        <div>
+          <input type="radio" name="genero" id="naobinario" value="NB">
+          <label for="naobinario">Não binário</label>
+        </div>
+        <div>
+          <input type="radio" name="genero" id="semresposta" value="SR">
+          <label for="semresposta">Prefiro não informar</label>
+        </div>
+
+        <div>
+          <label>Areas de interesse</label>
+
+          <div>
+            <label for="web">Sistemas WEB</label>
+            <input type="checkbox" name="web" id="web">
+          </div>
+
+          <div>
+            <label for="db">Banco de dados</label>
+            <input type="checkbox" name="db" id="db">
+          </div>
+
+          <div>
+            <label for="redes">Redes de computadores</label>
+            <input type="checkbox" name="redes" id="redes">
+          </div>
+      </div>
+
+      <input type="submit" value="Cadastrar">
+      <input type="reset" value="Limpar formulário">
+    </form>
+
+    <a href="introducao.html">Voltar</a>
+  </body>
+</html>

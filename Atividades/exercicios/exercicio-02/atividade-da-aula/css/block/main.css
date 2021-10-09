@@ -1,0 +1,18 @@
+main {
+  background-color: inherit;
+  width: 0 auto;
+  min-height: 80%;
+}
+
+main div {
+  padding: 5% 10%;
+}
+
+main div h2 {
+  padding-bottom: 3rem;
+  font-size: 2rem;
+}
+
+main div p {
+  font-size: 1rem;
+}

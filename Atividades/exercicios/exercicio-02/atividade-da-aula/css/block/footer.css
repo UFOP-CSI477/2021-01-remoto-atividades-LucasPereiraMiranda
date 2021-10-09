@@ -1,0 +1,10 @@
+footer {
+  background-color: #706677;
+  min-height: 10%;
+}
+
+footer p {
+  text-align: center;
+  text-decoration: underline;
+  padding-top: 1rem;
+}

@@ -1,0 +1,19 @@
+header {
+  min-height: 10%;
+  width: 0 auto;
+  background-color: #706677;
+  text-align: center;
+}
+
+header div h1 {
+  font-size: 1.8rem;
+  font-family: 'Courier New', 'Roboto', monospace;
+  text-decoration: underline;
+  color: #d6cfcb;
+}
+
+header nav a {
+  font-size: 1rem;
+  font-family: 'Courier New', 'Roboto', monospace;
+  color: #ccb7ae;
+}

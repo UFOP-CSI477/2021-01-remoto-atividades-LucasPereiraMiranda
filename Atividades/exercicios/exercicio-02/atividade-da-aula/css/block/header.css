@@ -1,8 +1,16 @@
 header {
   min-height: 10%;
-  width: 0 auto;
   background-color: #706677;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: row wrap;
+  justify-content: center;
+}
+
+header div{
+  background: inherit;
+  width: auto;
 }
 
 header div h1 {
@@ -16,4 +24,12 @@ header nav a {
   font-size: 1rem;
   font-family: 'Courier New', 'Roboto', monospace;
   color: #ccb7ae;
+}
+
+header nav a:hover{
+  color: #ccb7ee;
+}
+
+header nav a:active{
+  font-weight: bold;
 }

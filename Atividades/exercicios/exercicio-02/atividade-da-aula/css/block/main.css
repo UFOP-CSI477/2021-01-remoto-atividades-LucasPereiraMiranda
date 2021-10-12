@@ -1,11 +1,18 @@
 main {
   background-color: inherit;
-  width: 0 auto;
+  width: auto;
   min-height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main div {
   padding: 5% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 main div h2 {

@@ -5,9 +5,9 @@
 - Nome: Lucas Pereira Miranda
 - Matrícula: 17.2.8207
 - Curso: Engenharia de Computação
-- Semestre/Ano correntes: 8
+- Semestre/Ano correntes: 2021/1
 - Link para o seu GitHub: https://github.com/LucasPereiraMiranda
 
 ## [Projeto final:](./Projeto/README.md)
 
-Apresente uma breve descrição do seu projeto.
+Sistema web _handshake for the future_ com objetivo de ligar startups que necessitam de ideias e investimentos a investidores com interesse em ajudar.

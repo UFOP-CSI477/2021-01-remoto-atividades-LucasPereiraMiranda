@@ -1,23 +1,26 @@
 main {
-  background-color: inherit;
   width: auto;
   min-height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 0.1rem solid #aaa;
+  background-color: #ddd;
 }
 
-main div {
-  padding: 5% 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-main div h2 {
+main h2 {
   padding-bottom: 3rem;
   font-size: 2rem;
+  padding-right: 2rem;
+}
+
+main .content {
+  padding: 5% 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 0.1rem solid #111;
 }
 
 main div p {

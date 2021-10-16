@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/block/header.css">
     <link rel="stylesheet" href="css/block/main.css">
+    <link rel="stylesheet" href="css/block/form.css">
     <link rel="stylesheet" href="css/block/footer.css">
   </head>
   <body id="container">
     <header>
       <div>
-        <h1>Página Principal</h1>
+        <h1>Sistema Banco de dados</h1>
       </div>
       <nav>
         <a href="index.html">Principal</a>
@@ -26,18 +27,18 @@
     <main>
       <h2>Realize um cadastro</h2>
       <form method="POST" action="validar.html">
-        <div>
-          <div>
+        <div class="form-inputs">
+          <div class="form-input-wrapper">
             <!-- for da label é associado ao id -->
             <label for="nome">Nome:</label>
             <input type="text" name="nome" id="nome" placeholder="Nome da pessoa">
           </div>
-          <div>
-            <label for="usuario">Usuário</label>
+          <div class="form-input-wrapper">
+            <label for="usuario">Usuário:</label>
             <input type="text" name="usuario" id="usuario" placeholder="Nickname customizado">
           </div>
-          <div>
-            <label for="email">E-mail</label>
+          <div class="form-input-wrapper">
+            <label for="email">E-mail:</label>
             <input type="email" name="email" id="email" placeholder="E-mail">
           </div>
         </div>

@@ -1,6 +1,6 @@
 header {
   min-height: 10%;
-  background-color: #706677;
+  background-color: #111111;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,10 +14,17 @@ header div{
 }
 
 header div h1 {
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   font-family: 'Courier New', 'Roboto', monospace;
   text-decoration: underline;
   color: #d6cfcb;
+}
+
+header nav{
+  padding-top: 2rem;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
 }
 
 header nav a {

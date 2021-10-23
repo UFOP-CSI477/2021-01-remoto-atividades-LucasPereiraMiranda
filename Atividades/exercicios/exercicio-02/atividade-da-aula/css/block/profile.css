@@ -1,0 +1,30 @@
+.profile-content{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    flex-grow: initial;
+    justify-content: space-around;
+}
+
+.profile-infos{
+    display:flex;
+    flex-direction: column;
+    flex-basis: initial;
+    padding: 2rem;
+    border: 0.1rem solid #aaa;
+}
+
+.profile-infos-title{
+    align-content: center;
+    padding: 2rem;
+    text-decoration: underline;
+}
+
+.image-wrapper{
+    padding: 2rem;
+    border: 1rem solid #ccb7ae;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Explorando o Brasil</title>
+</head>
+<body onload="carregarRegioes()" class="container-fluid">
+    <header class="jumbotron m-5">
+        <h1 class="display-4">Explorando o Brasil</h1>
+        <h2>Explore as regiões, estados e cidades do Brasil utilizando o presente sistema</h2>
+    </header>
+    <main class="d-flex justify-content-center">
+        <div class="flex-xl-column">
+            <form>
+                <div class="mb-3">
+                    <label for="regioes" class="form-label lead">Regiões:</label>
+                    <select name="regioes" id="regioes" class="form-control" onchange="carregarEstados()">
+                        <option value="">Selecionar:</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="estados" class="form-label lead">Estados:</label>
+                    <select name="estados" id="estados" class="form-control" onchange="carregarCidades()">
+                        <option value="">Selecionar</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="cidades" class="form-label lead">Cidades:</label>
+                    <select name="cidades" id="cidades" class="form-control">
+                        <option value="">Selecionar</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <footer class="d-flex justify-content-center fixed-bottom d-flex p-4">
+        <p>Disciplina: Sistemas Web I | Atividade de carregamento api</p>
+      </footer>
+
+    <script src="05-carregamento-api.js"></script>
+
+</body>
+</html>

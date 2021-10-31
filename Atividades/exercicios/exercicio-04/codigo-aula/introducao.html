@@ -24,6 +24,27 @@
           console.log(i);
         }
       }
+
+      function carregarDadosFormulario() {
+        const nome = document.frmDados.nome.value;
+        const sobrenome = document.frmDados.sobrenome.value;
+
+        const pessoa = new Pessoa(nome,sobrenome);
+
+        console.log(pessoa);
+
+        window.alert(`Dados carregados com sucesso ${pessoa.nome} ${pessoa.sobrenome}`);
+      
+        const object = {
+          name: pessoa.nome,
+          lastName: pessoa.sobrenome,
+          address:{
+            street: 'Rua Capitão Bernando',
+            number: '100'
+          }
+        }
+        console.log(object);
+      }
     </script>
   </head>
   <body>
@@ -32,7 +53,15 @@
       <div id="data"></div>
       <div id="nome"></div>
     </div>
+    
+    <form action="post" method="post" name="frmDados">
+      <input type="text" name="nome">
+      <input type="text" name="sobrenome">
+
+    </form>
+    
     <input type="button" value="Carregar" onclick="carregarDados()">
+    <input type="button" value="Carregar do formulário" onclick="carregarDadosFormulario()">
     
     <script>
       document.write("Olá mundo");

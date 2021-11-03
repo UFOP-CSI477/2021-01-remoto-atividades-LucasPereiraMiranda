@@ -1,0 +1,45 @@
+/* #E1721A */
+/* #fdfeff; */
+
+header {
+  min-height: 15%;
+  background-color: #fdfeff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: row wrap;
+  justify-content: center;
+}
+
+header div{
+  background: inherit;
+  width: auto;
+}
+
+header div h1 {
+  font-size: 2.8rem;
+  text-decoration: underline;
+  color: #000111;
+}
+
+header nav{
+  padding-top: 2rem;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+header nav a {
+  font-size: 1rem;
+  font-family: 'Courier New', 'Roboto', monospace;
+  color: #000133;
+  transition: 0.3s;
+}
+
+header nav a:hover{
+  color: #E1721A;
+}
+
+header nav a:active{
+  font-weight: bold;
+}

@@ -1,0 +1,10 @@
+#newTransaction{
+    background: #949ba2;
+    min-width: 90%;
+    min-height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2%;
+}

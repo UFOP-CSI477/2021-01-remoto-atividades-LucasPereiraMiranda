@@ -1,0 +1,33 @@
+#history{
+    background: #949ba2;
+    width: auto;
+    min-height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2%;
+}
+
+#history div{
+    width: 100%;
+}
+
+#history div h2{
+    color: #000133;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+#history div .balance-display{
+    color: #000133;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+#history div .balance{
+    font-size: 1.8rem;
+}
+
+
+

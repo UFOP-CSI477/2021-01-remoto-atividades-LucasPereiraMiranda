@@ -17,3 +17,7 @@ body{
 #container {
   padding: 0 10%;
 }
+
+.omit{
+  display: none;
+}

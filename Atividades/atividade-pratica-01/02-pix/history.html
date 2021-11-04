@@ -28,10 +28,11 @@
       <div>
         <h2>Histórico de transações</h2>
         <p class="balance-display">Saldo: <span class="balance">R$800,00</span></p>
-        <table class="table" class="table-primary">
+        <table id="table" class="table table-primary">
           <thead>
               <tr>
-                <th scope="col">Banco</th>
+                <th scope="col">Banco envio</th>
+                <th scope="col">Banco recebimento</th>
                 <th scope="col">Tipo de chave</th>
                 <th scope="col">Chave</th>
                 <th scope="col">Operação</th>
@@ -39,144 +40,8 @@
                 <th scope="col">Data</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Banco do Basil</th>
-                <td>Aleatória</td>
-                <td>earkfjbasdf</td>
-                <td>Enviar</td>
-                <td>R$30,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Itaú</th>
-                <td>Aleatória</td>
-                <td>afonaiefnaowiefn</td>
-                <td>Enviar</td>
-                <td>R$45,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Nubank</th>
-                <td>Aleatória</td>
-                <td>waefnawefionawoiefn</td>
-                <td>Enviar</td>
-                <td>R$25,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Banco Inter</th>
-                <td>Aleatória</td>
-                <td>aweroifnaweoifnawoief</td>
-                <td>Receber</td>
-                <td>R$1200,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Caixa</th>
-                <td>CPF</td>
-                <td>waeiofnawoiefnoiawef</td>
-                <td>Receber</td>
-                <td>R$4100,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Banco Inter</th>
-                <td>Aleatória</td>
-                <td>aweroifnaweoifnawoief</td>
-                <td>Receber</td>
-                <td>R$1200,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Caixa</th>
-                <td>CPF</td>
-                <td>waeiofnawoiefnoiawef</td>
-                <td>Receber</td>
-                <td>R$4100,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Banco Inter</th>
-                <td>Aleatória</td>
-                <td>aweroifnaweoifnawoief</td>
-                <td>Receber</td>
-                <td>R$1200,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Caixa</th>
-                <td>CPF</td>
-                <td>waeiofnawoiefnoiawef</td>
-                <td>Receber</td>
-                <td>R$4100,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Banco Inter</th>
-                <td>Aleatória</td>
-                <td>aweroifnaweoifnawoief</td>
-                <td>Receber</td>
-                <td>R$1200,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Caixa</th>
-                <td>CPF</td>
-                <td>waeiofnawoiefnoiawef</td>
-                <td>Receber</td>
-                <td>R$4100,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Banco Inter</th>
-                <td>Aleatória</td>
-                <td>aweroifnaweoifnawoief</td>
-                <td>Receber</td>
-                <td>R$1200,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Caixa</th>
-                <td>CPF</td>
-                <td>waeiofnawoiefnoiawef</td>
-                <td>Receber</td>
-                <td>R$4100,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Banco Inter</th>
-                <td>Aleatória</td>
-                <td>aweroifnaweoifnawoief</td>
-                <td>Receber</td>
-                <td>R$1200,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Caixa</th>
-                <td>CPF</td>
-                <td>waeiofnawoiefnoiawef</td>
-                <td>Receber</td>
-                <td>R$4100,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Banco Inter</th>
-                <td>Aleatória</td>
-                <td>aweroifnaweoifnawoief</td>
-                <td>Receber</td>
-                <td>R$1200,00</td>
-                <td>02/10/2021</td>
-              </tr>
-              <tr>
-                <th scope="row">Caixa</th>
-                <td>CPF</td>
-                <td>waeiofnawoiefnoiawef</td>
-                <td>Receber</td>
-                <td>R$4100,00</td>
-                <td>02/10/2021</td>
-              </tr>
-          </tbody>
+            <tbody id="tableBody-show">
+            </tbody>
         </table>
       </div>
 
@@ -184,5 +49,6 @@
     <footer>
       <p>Atividade Pix para a disciplina de Sistemas Web I</p>
     </footer>
+    <script src="javascript/handleHistory.js"></script>
   </body>
 </html>

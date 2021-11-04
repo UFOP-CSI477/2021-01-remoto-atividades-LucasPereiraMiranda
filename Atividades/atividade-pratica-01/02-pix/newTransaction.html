@@ -31,8 +31,14 @@
       <div>
         <form name="newTransaction">
           <div class="mb-3">
-            <label for="banks" class="form-label lead">Banco</label>
-            <select name="banks" id="banks" class="form-select form-select">
+            <label for="sendBank" class="form-label lead">Banco Envio</label>
+            <select name="sendBank" id="sendBank" class="form-select form-select">
+              <option value="">-</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="receiveBank" class="form-label lead">Banco Recebimento</label>
+            <select name="receiveBank" id="receiveBank" class="form-select form-select">
               <option value="">-</option>
             </select>
           </div>
@@ -76,6 +82,6 @@
       <p>Atividade Pix para a disciplina de Sistemas Web I</p>
     </footer>
     <script src="javascript/api-load.js"></script>
-    <script src="javascript/newTransaction.js"></script>
+    <script src="javascript/handleTransaction.js"></script>
   </body>
 </html>

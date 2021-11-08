@@ -1,4 +1,4 @@
-# Calculadora
+# Controle de Pix
 
 Dados do aluno:
 * Nome: Lucas Pereira Miranda

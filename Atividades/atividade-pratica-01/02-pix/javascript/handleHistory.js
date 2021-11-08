@@ -12,7 +12,7 @@ function getNumberTransactions(transactions){
     return transactions.length;
 }
 
-function handleHistory(){
+function handleTable(){
     const transactions = getTransactionsFromLocalStorage();
     const numberTransactions = getNumberTransactions(transactions);
     if(numberTransactions===0){
@@ -28,7 +28,13 @@ function setTransactionsHistoryTable(transactions){
     });
 }
 
+function moneyMaskToBRL(money){
+    const moneyConvertedToNumber = parseInt(money);
+    return moneyConvertedToNumber.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+}
+
 function addTransactionInHistoryTable(tableBodyElement,transaction){
+    const masckedMoney = moneyMaskToBRL(transaction.moneyAmounth);
     const tableRowElement = document.createElement('tr');
     tableRowElement.innerHTML = '<tr></tr>';
 
@@ -45,7 +51,7 @@ function addTransactionInHistoryTable(tableBodyElement,transaction){
     pixKeyTypeShow.innerHTML = `<td>${transaction.typePixKey}</td>`;
     pixKeyContentShow.innerHTML = `<td>${transaction.pixKeyContent}</td>`;
     operationTypeShow.innerHTML = `<td>${transaction.operationType}</td>`;
-    moneyAmounthShow.innerHTML = `<td>${transaction.moneyAmounth}</td>`;
+    moneyAmounthShow.innerHTML = `<td>${masckedMoney}</td>`;
     transactionDateShow.innerHTML = `<td>${transaction.transactionDate}</td>`;
 
     tableRowElement.appendChild(sendBankShow);
@@ -59,10 +65,37 @@ function addTransactionInHistoryTable(tableBodyElement,transaction){
     tableBodyElement.appendChild(tableRowElement);
 }
 
+function handleTotal(){
+    const transactions = getTransactionsFromLocalStorage();
+    const total = getTotalTransactions(transactions);
+
+    const balanceElement = document.getElementsByClassName('balance').item(0);
+    balanceElement.innerHTML = moneyMaskToBRL(total);
+
+    if(total < 0){
+        balanceElement.classList.add('negative-amount');
+    }
+}
+
+function getTotalTransactions(transactions){
+    const total = transactions.reduce((sum, transaction)=>{
+        if(transaction.operationType === 'Receber'){
+            return sum + parseInt(transaction.moneyAmounth);
+        }
+        return sum - parseInt(transaction.moneyAmounth);
+    },0);
+
+    return total;
+}
+
 function omitTransactionsTable(){
     const tableElement = document.getElementById('table');
     tableElement.className += " omit";
 }
 
-handleHistory();
+function handleHistory(){
+    handleTable();
+    handleTotal();
+}
+
 

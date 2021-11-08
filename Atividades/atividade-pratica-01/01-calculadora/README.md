@@ -5,6 +5,10 @@ Dados do aluno:
 * Matrícula: 17.2.8207
 * Curso: Engenharia de Computação
 
+Imagem do projeto em execução:
+
+![alt text](.github/calc.png)
+
 Descrição e Referências:
 
 Projeto de uma calculadora desenvolvida um tempo atrás como projeto prático em um curso que participei: https://frontendmasters.com/

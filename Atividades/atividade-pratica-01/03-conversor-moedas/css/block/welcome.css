@@ -1,0 +1,29 @@
+#welcome{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 70%;
+}
+
+#welcome div{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome div h2{
+  font-size: 2rem;
+  font-weight: 1.2rem;
+  color: #000111;
+}
+
+#welcome div span{
+  font-size: 1rem;
+  font-weight: 0.5rem;
+  color: #18206F;
+  padding-top: 1rem;
+}

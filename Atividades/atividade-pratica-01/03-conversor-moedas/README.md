@@ -16,10 +16,11 @@ Imagens do projeto em execução:
 Página inicial:
 ![alt text](.github/init.png)
 
-convertendo moedas:
+Antes de converter as moedas:
 ![alt text](.github/in-sequence.png)
 
-
+convertendo as moedas:
+![alt text](.github/converted.png)
 
 Aquivo de Reset css utilizado:
 

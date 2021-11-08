@@ -1,0 +1,44 @@
+/* #E1721A */
+/* #fdfeff; */
+
+header {
+  min-height: 15%;
+  background-color: #BD1E1E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header div{
+  background: inherit;
+  width: auto;
+}
+
+header div h1 {
+  font-size: 2.8rem;
+  text-decoration: underline;
+  color: #000111;
+}
+
+header nav{
+  padding-top: 2rem;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+header nav a {
+  font-size: 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #F5E2C8;
+  transition: 0.3s;
+}
+
+header nav a:hover{
+  color: #18206F;
+}
+
+header nav a:active{
+  font-weight: bold;
+}

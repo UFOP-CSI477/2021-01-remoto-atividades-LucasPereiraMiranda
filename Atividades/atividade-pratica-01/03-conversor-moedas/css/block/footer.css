@@ -1,0 +1,14 @@
+footer {
+  background-color: #111111;
+  min-height: 15%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 1.0rem;
+  color: #E1721A;
+  text-decoration: underline;
+  padding-top: 1rem;
+}

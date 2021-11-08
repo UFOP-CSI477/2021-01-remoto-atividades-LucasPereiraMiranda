@@ -1,4 +1,4 @@
-# Calculadora
+# Conversor de moedas
 
 Dados do aluno:
 * Nome: Lucas Pereira Miranda

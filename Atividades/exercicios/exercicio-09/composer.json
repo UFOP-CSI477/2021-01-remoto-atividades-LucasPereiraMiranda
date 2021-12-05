@@ -1,0 +1,15 @@
+{
+  "name": "lucaspereiramiranda/estados",
+  "autoload": {
+    "psr-4": {
+      "lucaspereiramiranda\\Estados\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Lucas Pereira Miranda",
+      "email": "lucas.miranda1@aluno.ufop.edu.br"
+    }
+  ],
+  "require": {}
+}

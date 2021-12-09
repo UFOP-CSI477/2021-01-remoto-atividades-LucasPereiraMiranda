@@ -13,6 +13,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Models\State;
+use App\Models\Product;
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/states',function(){
+    $states = State::all();
+    return view('listStates',['data'=>$states]);
+});
+
+Route::get('/states/{id}',function($id){
+    $state = State::findOrFail($id);
+    return view('listStates',['data'=>$state]);;
+});
+
+Route::get('/products',function(){
+    $products = Product::all();
+    return view('listProducts',['data'=>$products]);
+});
+
+Route::get('/products/{id}',function($id){
+    $product = Product::findOrFail($id);
+    return view('listProducts',['data'=>$product]);;
 });

@@ -25,7 +25,7 @@ class StateController extends Controller
      */
     public function create()
     {
-        //
+        return view('states.create');
     }
 
     /**
@@ -36,7 +36,9 @@ class StateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        State::create($request->all());
+        session()->flash('mensagem','Estado cadastrado com sucesso');
+        return redirect()->route('states.index');
     }
 
     /**
@@ -47,7 +49,7 @@ class StateController extends Controller
      */
     public function show(State $state)
     {
-        //
+        return view('states.show',['state'=>$state]);
     }
 
     /**
@@ -58,7 +60,7 @@ class StateController extends Controller
      */
     public function edit(State $state)
     {
-        //
+        return view('states.edit',['state'=>$state]);
     }
 
     /**
@@ -70,7 +72,10 @@ class StateController extends Controller
      */
     public function update(Request $request, State $state)
     {
-        //
+        $state->fill($request->all());
+        $state->save();
+        session()->flash('mensagem','Estado atualizado com sucesso');
+        return redirect()->route('states.index');
     }
 
     /**
@@ -81,6 +86,8 @@ class StateController extends Controller
      */
     public function destroy(State $state)
     {
-        //
+        $state->delete();
+        session()->flash('mensagem','Estado excluido com sucesso');
+        return redirect()->route('states.index');
     }
 }

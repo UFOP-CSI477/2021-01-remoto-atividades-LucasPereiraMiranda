@@ -15,12 +15,12 @@
         </thead>
         <tbody>
 
-            @foreach($states as $e)
+            @foreach($states as $state)
                 <tr>
-                    <td>{{ $e->id }}</td>
-                    <td>{{ $e->name }} </td>
-                    <td>{{ $e->sigla }}</td>
-                    <td><a href="{{route('states.show', $e->id)}}">Exibir</a></td>
+                    <td>{{ $state->id }}</td>
+                    <td>{{ $state->name }} </td>
+                    <td>{{ $state->sigla }}</td>
+                    <td><a href="{{route('states.show', $state->id)}}">Exibir</a></td>
                 </tr>
             @endforeach
         </tbody>

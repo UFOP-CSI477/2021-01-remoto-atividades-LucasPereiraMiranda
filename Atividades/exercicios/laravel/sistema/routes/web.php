@@ -15,27 +15,33 @@ use Illuminate\Support\Facades\Route;
 
 use App\Models\State;
 use App\Models\Product;
+use App\Http\Controllers\StateController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('principal');
+})->name('principal');
 
-Route::get('/states',function(){
-    $states = State::all();
-    return view('listStates',['data'=>$states]);
-});
+Route::resource('/states',StateController::class);
+Route::resource('/products',ProductController::class);
 
-Route::get('/states/{id}',function($id){
-    $state = State::findOrFail($id);
-    return view('listStates',['data'=>$state]);;
-});
 
-Route::get('/products',function(){
-    $products = Product::all();
-    return view('listProducts',['data'=>$products]);
-});
+// Route::get('/states',function(){
+//     $states = State::all();
+//     return view('listStates',['data'=>$states]);
+// });
 
-Route::get('/products/{id}',function($id){
-    $product = Product::findOrFail($id);
-    return view('listProducts',['data'=>$product]);;
-});
+// Route::get('/states/{id}',function($id){
+//     $state = State::findOrFail($id);
+//     return view('listStates',['data'=>$state]);;
+// });
+
+// Route::get('/products',function(){
+//     $products = Product::all();
+//     return view('listProducts',['data'=>$products]);
+// });
+
+// Route::get('/products/{id}',function($id){
+//     $product = Product::findOrFail($id);
+//     return view('listProducts',['data'=>$product]);;
+// });

@@ -23,6 +23,7 @@ Route::get('/', function () {
     return view('principal');
 })->name('principal');
 
+
 Route::resource('/states',StateController::class)->middleware('auth');
 Route::resource('/cities',CityController::class)->middleware('auth');
 Route::resource('/products',ProductController::class)->middleware('auth');

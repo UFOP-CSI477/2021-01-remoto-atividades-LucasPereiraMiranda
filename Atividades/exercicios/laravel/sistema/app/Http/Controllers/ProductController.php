@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -25,7 +26,13 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        if(Auth::check()){
+            return view('products.create');
+        }
+        else{
+            session()->flash('mensagem','Operação não permitida');
+            return redirect()->route('login');
+        }
     }
 
     /**

@@ -22,9 +22,11 @@ Route::get('/', function () {
     return view('principal');
 })->name('principal');
 
-Route::resource('/states',StateController::class);
+Route::resource('/states',StateController::class)->middleware('auth');
 Route::resource('/products',ProductController::class);
-
+Route::resource('/cities',CityController::class);
+Route::resource('/peoples',PersonController::class);
+Route::resource('/sales',SaleController::class);
 
 // Route::get('/states',function(){
 //     $states = State::all();
@@ -45,3 +47,7 @@ Route::resource('/products',ProductController::class);
 //     $product = Product::findOrFail($id);
 //     return view('listProducts',['data'=>$product]);;
 // });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

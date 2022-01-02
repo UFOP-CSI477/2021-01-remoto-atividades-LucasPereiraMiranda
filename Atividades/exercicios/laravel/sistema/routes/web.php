@@ -17,14 +17,15 @@ use App\Models\State;
 use App\Models\Product;
 use App\Http\Controllers\StateController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CityController;
 
 Route::get('/', function () {
     return view('principal');
 })->name('principal');
 
-Route::resource('/states',StateController::class)->middleware('auth');
-Route::resource('/products',ProductController::class);
+Route::resource('/states',StateController::class);
 Route::resource('/cities',CityController::class);
+Route::resource('/products',ProductController::class);
 Route::resource('/peoples',PersonController::class);
 Route::resource('/sales',SaleController::class);
 

@@ -5,16 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class State extends Model
+class City extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'name',
-        'sigla',
+        'state_id',
     ];
-    // 1 estado tem muitas cidades
-    public function cities(){
-        return $this->hasMany(City::class);
+
+    // 1 cidade pertence ao estado
+    public function state(){
+        return $this->belongsTo(State::class);
     }
 }

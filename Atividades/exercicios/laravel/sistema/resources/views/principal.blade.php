@@ -38,7 +38,9 @@
                 <li class="nav-item"><a class="nav-link" href="{{route('principal')}}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('states.index')}}">Estados</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('products.index')}}">Produtos</a></li>
-                <li class="nav-item"><a class="nav-link" href="/cidades">Cidades</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('cities.index')}}">Cidades</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('peoples.index')}}">Pessoas</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('sales.index')}}">Vendas</a></li>
                 <li class="nav-item"><a class="nav-link" ref="/vendas">Vendas</a></li>
             </ul>
         </nav>

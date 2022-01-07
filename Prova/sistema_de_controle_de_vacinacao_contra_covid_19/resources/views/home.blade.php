@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('principal')
 
-@section('content')
+@section('conteudo')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('Seja bem-vindo(a) ao Dashboard do sistema') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    Acesse os recursos presentes na barra de navegação para realizar as operações sobre as pessoas, unidades, vacinas e registros.
                 </div>
             </div>
         </div>

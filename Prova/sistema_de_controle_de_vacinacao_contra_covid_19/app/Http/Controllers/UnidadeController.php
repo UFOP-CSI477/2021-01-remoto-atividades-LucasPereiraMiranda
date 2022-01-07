@@ -15,7 +15,8 @@ class UnidadeController extends Controller
      */
     public function index()
     {
-        //
+        $unidades = Unidade::orderBy('nome', 'desc')->get();
+        return view('unidades.index',['unidades' => $unidades]);
     }
 
     /**
@@ -81,6 +82,14 @@ class UnidadeController extends Controller
      */
     public function destroy(Unidade $unidade)
     {
-        //
+        try{
+            $unidade->delete();
+            session()->flash('mensagem', 'Unidade excluída com sucesso!');
+            return redirect()->route('unidades.index');
+        }
+        catch(\Illuminate\Database\QueryException $queryException){
+            session()->flash('mensagem', 'Esta unidade já está associada a um registro! Portanto, ela não foi removida');
+            return redirect()->route('unidades.index');
+        }
     }
 }

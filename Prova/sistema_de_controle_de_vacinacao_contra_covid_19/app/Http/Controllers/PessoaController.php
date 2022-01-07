@@ -15,7 +15,7 @@ class PessoaController extends Controller
      */
     public function index()
     {
-        $pessoas = Pessoa::orderBy('created_at', 'desc')->get();
+        $pessoas = Pessoa::orderBy('nome', 'asc')->get();
         return view('pessoas.index', ['pessoas' => $pessoas]);
     }
 
@@ -26,7 +26,7 @@ class PessoaController extends Controller
      */
     public function create()
     {
-        //
+        return view('pessoas.create');
     }
 
     /**
@@ -37,7 +37,9 @@ class PessoaController extends Controller
      */
     public function store(StorePessoaRequest $request)
     {
-        //
+        Pessoa::create($request->all());
+        session()->flash('mensagem', 'Pessoa inserida com sucesso!');
+        return redirect()->route('pessoas.index');
     }
 
     /**
@@ -59,7 +61,7 @@ class PessoaController extends Controller
      */
     public function edit(Pessoa $pessoa)
     {
-        //
+        return view('pessoas.edit', ['pessoa' => $pessoa]);
     }
 
     /**

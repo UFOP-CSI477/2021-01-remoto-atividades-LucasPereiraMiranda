@@ -15,7 +15,8 @@ class RegistroController extends Controller
      */
     public function index()
     {
-        //
+        $registros = Registro::orderBy('id', 'desc')->get();
+        return view('registros.index',['registros' => $registros]);
     }
 
     /**
@@ -25,7 +26,7 @@ class RegistroController extends Controller
      */
     public function create()
     {
-        //
+        return view('registros.create');
     }
 
     /**
@@ -36,7 +37,9 @@ class RegistroController extends Controller
      */
     public function store(StoreRegistroRequest $request)
     {
-        //
+        Registro::create($request->all());
+        session()->flash('mensagem', 'Registro cadastrado com sucesso!');
+        return redirect()->route('registros.index');
     }
 
     /**
@@ -47,7 +50,7 @@ class RegistroController extends Controller
      */
     public function show(Registro $registro)
     {
-        //
+        return view('registros.show', [ 'registro' => $registro]);
     }
 
     /**
@@ -58,7 +61,7 @@ class RegistroController extends Controller
      */
     public function edit(Registro $registro)
     {
-        //
+        return view('registros.edit', [ 'registro' => $registro ]);
     }
 
     /**
@@ -70,7 +73,10 @@ class RegistroController extends Controller
      */
     public function update(UpdateRegistroRequest $request, Registro $registro)
     {
-        //
+        $registro->fill($request->all());
+        $registro->save();
+        session()->flash('mensagem', 'Registro atualizado com sucesso!');
+        return redirect()->route('registros.index');
     }
 
     /**
@@ -81,6 +87,8 @@ class RegistroController extends Controller
      */
     public function destroy(Registro $registro)
     {
-        //
+        $registro->delete();
+        session()->flash('mensagem', 'Registro excluído com sucesso!');
+        return redirect()->route('registros.index');
     }
 }

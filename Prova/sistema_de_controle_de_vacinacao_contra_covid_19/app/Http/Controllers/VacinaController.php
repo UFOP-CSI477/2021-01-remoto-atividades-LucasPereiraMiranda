@@ -15,7 +15,8 @@ class VacinaController extends Controller
      */
     public function index()
     {
-        //
+        $vacinas = Vacina::orderBy('nome', 'asc')->get();
+        return view('vacinas.index', ['vacinas' => $vacinas]);
     }
 
     /**
@@ -58,7 +59,7 @@ class VacinaController extends Controller
      */
     public function edit(Vacina $vacina)
     {
-        //
+        return view('vacinas.edit',[ 'vacina' => $vacina ]);
     }
 
     /**
@@ -70,7 +71,10 @@ class VacinaController extends Controller
      */
     public function update(UpdateVacinaRequest $request, Vacina $vacina)
     {
-        //
+        $vacina->fill($request->all());
+        $vacina->save();
+        session()->flash('mensagem', 'Vacina atualizada com sucesso!');
+        return redirect()->route('vacinas.index');
     }
 
     /**
